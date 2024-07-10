@@ -1,0 +1,287 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(244, 244, 244);
+}
+
+.logo-nav {
+    width: 45px;
+    height: 45px;
+    margin-left: 20px;
+    margin-top: 15px;
+}
+
+nav {
+    width: 100%;
+    background-color: rgb(11, 11, 11);
+    padding: 25px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    height: 85px;
+}
+
+.menu-items {
+    margin-right: 20px;
+    margin-top: 18px;
+    display: flex;
+    align-items: center;
+}
+
+.menu-items ul {
+    position: absolute;
+    top: 87px;                      /* Si queres sacarle el borde al menu cuando se despliega */
+    left: 0;
+    display: none;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    padding: 15px 10px;
+    background-color: rgba(11, 11, 11, 0.9);
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.menu-items ul li {
+    list-style: none;
+}
+
+.menu-items ul li a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    padding: 10px 15px;
+    gap: 20px;
+    border-radius: 8px;
+    transition: background-color 0.2s ease;
+}
+
+.menu-items ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.menu-toggle:checked~ul {
+    display: flex;
+}
+
+.icono-nav {
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+}
+
+.menu-toggle {
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+}
+
+@media (min-width: 1024px) {
+    .menu-items label {
+        display: none;
+    }
+
+    .menu-items ul {
+        position: inherit;
+        display: flex;
+        padding: 3px;
+        margin: 5px;
+        flex-direction: row;
+    }
+
+    .menu-items {
+        margin-top: 20px;
+        justify-content: flex-end;
+        align-items: center;
+    }
+}
+
+/* FOOTER */
+footer {
+    background: rgb(220, 225, 222);
+    text-align: center;
+    padding: 20px;
+}
+
+footer h4 {
+    margin-top: 10px;
+    max-width: 100%;
+    font-size: 0.9rem;
+    line-height: 1.3;                /* Espaciado de línea */
+}
+
+@media (min-width: 1024px) {
+    footer h4 {
+        font-size: 1.1rem;
+    }
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px;
+}
+
+/* Estilos específicos para la página de login */
+form {
+    max-width: 400px;
+    background: rgb(255, 255, 255);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin: 20px auto;
+}
+
+form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+form input[type="text"],
+form input[type="password"],
+form input[type="number"],
+form input[type="date"],
+form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid rgb(204, 204, 204);
+    border-radius: 3px;
+}
+
+form input[type="submit"] {
+    background: rgb(76, 175, 80);
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+form input[type="submit"]:hover {
+    background: rgb(69, 160, 73);
+}
+
+/* Estilos específicos para la tabla de tareas */
+table {
+    width: 60%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+table th, table td {
+    border: 1px solid rgb(221, 221, 221);
+    padding: 8px;
+    text-align: left;
+}
+
+table th {
+    background-color: rgb(76, 175, 80);
+    color: rgb(255, 255, 255);
+}
+
+table tr:nth-child(even) {
+    background-color: rgb(242, 242, 242);
+}
+
+table tr:hover {
+    background-color: rgb(221, 221, 221);
+}
+
+/* Estilos para enlaces y botones */
+a {
+    color: rgb(175, 76, 76);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.link-index {
+    color: rgb(76, 94, 175);
+    text-decoration: none;
+}
+
+.link-index {
+    text-decoration: underline;
+}
+
+.button {
+    background-color: rgb(76, 175, 80);
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 3px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: rgb(69, 160, 73);
+}
+
+/* Estilos para mensajes de error */
+.error {
+    color: rgb(255, 0, 0);
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Estilos para mensajes de éxito */
+.success {
+    color: rgb(0, 128, 0);
+    font-weight: bold;
+    margin-bottom: 11px;
+}
+
+/* Estilos específicos para la página de modificación de tarea */
+.form-modificar {
+    max-width: 600px;
+    background: rgb(255, 255, 255);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin: 20px auto;
+}
+
+.form-modificar label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.form-modificar input[type="text"],
+.form-modificar input[type="date"],
+.form-modificar select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid rgb(204, 204, 204);
+    border-radius: 3px;
+}
+
+.form-modificar input[type="submit"] {
+    background: rgb(76, 175, 80);
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.form-modificar input[type="submit"]:hover {
+    background: rgb(69, 160, 73);
+}
